@@ -15,7 +15,7 @@ class SearchClass {
     }
 
     AddSearch() {
-        const name = this.innerHTML
+        const name = this.innerHTML.toLowerCase()
 
         const regex = /bg-(\w+)/g;
         const found = this.classList.value.match(regex);

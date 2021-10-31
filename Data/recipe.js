@@ -60,7 +60,7 @@ export const recipes = [
         quantity: 5,
       },
       {
-        ingredient: 'Lait de Coco',
+        ingredient: 'Lait de coco',
         quantity: 100,
         unit: 'ml',
       },
@@ -829,7 +829,7 @@ export const recipes = [
         quantity: 3,
       },
       {
-        ingredient: 'Crème Fraîche',
+        ingredient: 'Crème fraiche',
         quantity: 20,
         unit: 'cl',
       },
@@ -841,7 +841,7 @@ export const recipes = [
     ],
     time: 60,
     description:
-      "Etaler la pate dans un moule et la piquer.Parsemer de beurre. Faire chauffer les lardon dans une poêle. Battre les oeufs en ajoutant la crème fraîche et le lait. Finalement ajouter les lardons, salez poivrez à votre gout. Verser l'ensemble sur la pâte. Cuire environ 50 minutes.",
+      "Etaler la pate dans un moule et la piquer.Parsemer de beurre. Faire chauffer les lardon dans une poêle. Battre les oeufs en ajoutant la crème fraiche et le lait. Finalement ajouter les lardons, salez poivrez à votre gout. Verser l'ensemble sur la pâte. Cuire environ 50 minutes.",
     appliance: 'Four',
     ustensils: ['moule à gateaux', 'rouleau à patisserie', 'fouet'],
   },
@@ -967,7 +967,7 @@ export const recipes = [
         quantity: 1,
       },
       {
-        ingredient: 'Crème fraîche',
+        ingredient: 'Crème fraiche',
         quantity: 4,
         unit: 'cuillère à soupe',
       },
@@ -984,7 +984,7 @@ export const recipes = [
     ],
     time: 15,
     description:
-      "Faire fondre l'oseille avec du beurre demi sel, ajouter un litre d'eau. Ajouter les vermicelles. Laisser cuire. une foit prêt, sortir du feu et après 5 minutes ajouter le jaune d'oeuf et la crême fraîche",
+      "Faire fondre l'oseille avec du beurre demi sel, ajouter un litre d'eau. Ajouter les vermicelles. Laisser cuire. une foit prêt, sortir du feu et après 5 minutes ajouter le jaune d'oeuf et la crême fraiche",
     appliance: 'Casserolle',
     ustensils: ['couteau', 'cuillère en bois'],
   },
@@ -1013,7 +1013,7 @@ export const recipes = [
         unit: 'grammes',
       },
       {
-        ingredient: 'Crême fraîche',
+        ingredient: 'Crême fraiche',
         quantity: 10,
         unit: 'cl',
       },
@@ -1206,7 +1206,7 @@ export const recipes = [
         unit: 'grammes',
       },
       {
-        ingredient: 'Crème fraîche',
+        ingredient: 'Crème fraiche',
         quantity: 20,
         unit: 'cl',
       },
@@ -1243,7 +1243,7 @@ export const recipes = [
         unit: 'grammes',
       },
       {
-        ingredient: 'Crème fraîche',
+        ingredient: 'Crème fraiche',
         quantity: 2,
         unit: 'cuillères à soupe',
       },
@@ -1657,7 +1657,7 @@ export const recipes = [
         unit: 'grammes',
       },
       {
-        ingredient: 'Crème Fraîche',
+        ingredient: 'Crème fraiche',
         quantity: 20,
         unit: 'cl',
       },
@@ -1714,7 +1714,7 @@ export const recipes = [
         quantity: 2,
       },
       {
-        ingredient: 'Kiwis',
+        ingredient: 'Kiwi',
         quantity: 3,
       },
       {

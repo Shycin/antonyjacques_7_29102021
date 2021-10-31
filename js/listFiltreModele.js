@@ -44,6 +44,30 @@ export default function FilterList(title, label, listItem, color = 'primary') {
 
     const inputSearchBar = document.createElement('input')
     inputSearchBar.placeholder=label
+    inputSearchBar.onkeyup= function (e) 
+    {
+        if(this.value.length > 0)
+        {
+            Array.from(document.getElementsByClassName('CategoriesSearch__list__elt')).forEach(element => {
+                console.log(element.innerHTML.toLowerCase().includes(this.value))
+                
+                if(!element.innerHTML.toLowerCase().includes(this.value))
+                {
+                    element.classList.add('hidden')
+                }
+                else
+                {
+                    element.classList.remove('hidden')
+                }
+            });
+        }
+        else{
+            Array.from(document.getElementsByClassName('CategoriesSearch__list__elt')).forEach(element => {
+                element.classList.remove('hidden')
+            });
+        }
+        
+    }
 
     const chevron_up = document.createElement('span')
     chevron_up.classList.add('fas', 'fa-chevron-up')
@@ -75,19 +99,13 @@ export default function FilterList(title, label, listItem, color = 'primary') {
     listItem.forEach( (item, key) => {
         const itemInList = document.createElement('li')
         itemInList.id=`order-${key}`
-        itemInList.id=item.split(' ').join('-')
+        itemInList.id=item.split(' ').join('-').toLowerCase()
         itemInList.classList.add('CategoriesSearch__list__elt', `bg-${color}`, item.split(' ').join('-'))
         itemInList.onclick=AllSearch.AddSearch
         itemInList.innerHTML=item
 
-        console.log(itemInList)
-
         list.append(itemInList)
     })
-
-    console.log(AllSearch)
-
-
 
     listContent.append(buttonOpen)
     listContent.append(searchBar)
