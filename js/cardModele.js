@@ -31,7 +31,7 @@ export default function Card(card) {
 
     card.ingredients.forEach(element => {
         const ingredient = document.createElement('div')
-        ingredient.innerHTML = element.ingredient + ": " + element.quantity + element.unit
+        ingredient.innerHTML = element.ingredient + (element.quantity ? " : " + element.quantity : '') + " " + (element.unit ? element.unit : '') 
         ingredients.append(ingredient)
     });
     cardHContent.append(ingredients)
