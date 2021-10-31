@@ -41,7 +41,7 @@
 }
 .CategoriesSearch__categorie.selected
 {
-    flex-basis: 100%;
+    flex-basis: 60%;
 }
 
 .CategoriesSearch__categorie__btn
