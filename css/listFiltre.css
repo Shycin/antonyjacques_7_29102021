@@ -21,16 +21,23 @@
     overflow-y: auto;
     color: white;
     padding: 20px 0;
-    border-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-top: -5px;
 
     position: absolute;
 }
 
 .CategoriesSearch__list__elt
 {
-  flex-basis: calc(100%/3 - 3 * 1em);
-  text-align: left;
-  margin: 0 1em;
+    flex-basis: calc(100%/3 - 3 * 1em);
+    text-align: left;
+    padding: 2px 10px;
+    cursor: pointer;
+}
+.CategoriesSearch__list__elt:hover
+{
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .CategoriesSearch__categorie
@@ -42,6 +49,7 @@
 .CategoriesSearch__categorie.selected
 {
     flex-basis: 60%;
+    margin-bottom: 50px;
 }
 
 .CategoriesSearch__categorie__btn
@@ -62,9 +70,15 @@
 {
     display: flex;
     align-items: center;
-    padding: 1em 1em 0 1em;
+    padding: 0 1em;
     color: white;
 }
+.CategoriesSearch__categorie__SearchBar span
+{
+    padding: 1em;
+}
+
+
 
 .CategoriesSearch__categorie__SearchBar input
 {

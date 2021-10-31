@@ -1,3 +1,5 @@
+import { AllSearch } from '../class/searchClass.js';
+
 export default function FilterList(title, label, listItem, color = 'primary') {
     const listContent = document.createElement('div')
     listContent.classList.add('CategoriesSearch__categorie', `bg-${color}`)
@@ -73,12 +75,17 @@ export default function FilterList(title, label, listItem, color = 'primary') {
     listItem.forEach( (item, key) => {
         const itemInList = document.createElement('li')
         itemInList.id=`order-${key}`
-        itemInList.classList.add('CategoriesSearch__list__elt')
-        itemInList.onclick=""
+        itemInList.id=item.split(' ').join('-')
+        itemInList.classList.add('CategoriesSearch__list__elt', `bg-${color}`, item.split(' ').join('-'))
+        itemInList.onclick=AllSearch.AddSearch
         itemInList.innerHTML=item
+
+        console.log(itemInList)
 
         list.append(itemInList)
     })
+
+    console.log(AllSearch)
 
 
 
@@ -110,7 +117,7 @@ function showItem(this_, parent_ = null)
 
 
 window.addEventListener('click', function(e){
-    if(!e.target.closest(".selected"))
+    if(!e.target.closest(".selected") && document.getElementsByClassName('selected').length > 0)
     {
         const allToggle = document.getElementsByClassName('selected')[0].getElementsByClassName('toggleShow');
         document.getElementsByClassName('selected')[0].classList.toggle('selected')
