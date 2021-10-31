@@ -1,7 +1,6 @@
 import { AllRecipes } from '../class/recipeClass.js';
 import { AllSearch } from '../class/searchClass.js';
 import FilterList from './listFiltreModele.js';
-import Card from './cardModele.js';
 
 window.addEventListener(`DOMContentLoaded`, initializer);
 
@@ -25,7 +24,5 @@ function initFiltreExist()
     document.getElementsByClassName('CategoriesSearch')[0].append(FilterList("Ustensiles", "Rechercher un ustensile", AllRecipes.getUstensiles(), 'blood'))
 
 
-    AllRecipes.recipes.forEach(element => {
-        document.getElementsByClassName('ListCards')[0].append(Card(element))
-    });
+    AllRecipes.RefreshRender()
 }

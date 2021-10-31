@@ -1,4 +1,5 @@
 import { recipes } from '../Data/recipe.js'
+import Card from '../js/cardModele.js';
 
 class RecipeClass {
     constructor(recipes) {
@@ -40,6 +41,13 @@ class RecipeClass {
             itemList.ustensils.forEach(element => { this.ustensiles = setter(element, this.ustensiles) } );
             this.appareils = setter(itemList.appliance, this.appareils);
         })
+    }
+
+    RefreshRender()
+    {
+        AllRecipes.recipes.forEach(element => {
+            document.getElementsByClassName('ListCards')[0].append(Card(element))
+        });
     }
 }
 
