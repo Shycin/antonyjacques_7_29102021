@@ -1,0 +1,34 @@
+.SearchBar
+{
+  margin-top: 10px;
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+
+.SearchBar > *
+{
+    padding: 20px 10px;
+}
+
+.SearchBar > label
+{
+    padding: 15px 10px;
+}
+
+.SearchBar input
+{
+    width: 100%;
+    border: unset;
+    border-radius: 5px;
+    background-color: lightgrey;
+}
+
+.SearchBar .search-icon
+{
+    font-size: 24px;
+    background-color: lightgrey;
+    border-radius: 5px;
+    position: absolute;
+    right: 0;   
+}

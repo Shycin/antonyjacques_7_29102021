@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Les petits plat</title>
+    <link rel="stylesheet" href="./fontAwesome/css/all.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/search.css">
+    <link rel="stylesheet" href="./css/listFiltre.css">
+    <link rel="stylesheet" href="./css/listCard.css">
+    <script type="module" src="js/index.js"></script>
+    <script src="js/commonJs.js"></script>
+  </head>
+  <body id="root">
+    <div id='home'>
+        <div id='logo'>
+          <img src='./img/logo.png' alt='logo' />
+        </div>
+        <div class='SearchBar'>
+            <input
+                id='inputSearch'
+                name='s'
+                placeholder='Rechercher un ingrédient, appareil, ustensiles ou une recette'
+            />
+            <label for='inputSearch' class='search-icon fas fa-search'></label>
+        </div>
+        <div class='ItemsSearch'>
+          <!-- {search.map((element, key) => ( 
+            <div
+              tabIndex={0}
+              role='button'
+              class={`ItemsSearch__item ${element.class}`}
+              key={uid(key)}
+              onClick={() => deleteItemSearch(key)}
+              onKeyDown={(e) =>
+                verificationEvent(e) ? deleteItemSearch(key) : ''
+              }>
+              <span>{element.value}</span>
+              <span class='far fa-times-circle' />
+            </div>
+          ))}-->
+        </div>
+        <div class='CategoriesSearch'></div>
+        <div class='ListCards'></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+.ListCards
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 30px;
+    margin-top: 20px;
+}
+
+.ListCards__Card
+{
+    flex-basis: calc(100% / 3 - 20px);
+    border-radius: 5px;
+    background-color: rgb(231, 231, 231);
+    border-radius: 5px;
+}
+
+.ListCards__Card__Header
+{
+    background-color: rgb(199, 190, 190);
+    height: 200px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.ListCards__Card__Content
+{
+    padding: 10px;
+
+    display: grid;
+    grid-template: 
+            "title title title time"
+            "ingredients ingredients description description";
+    grid-gap: 20px;
+}
+
+
+.ListCards__Card__Content__title
+{
+    grid-area: title;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: left;
+}
+
+.ListCards__Card__Content__time
+{
+    grid-area: time;
+    text-align: right;
+}
+.ListCards__Card__Content__time::before
+{
+    font-family: "Font Awesome 5 Free";
+    content: '\f017';
+}
+
+
+.ListCards__Card__Content__ingredients
+{
+    grid-area: ingredients;
+    font-size: 10px;
+    text-align: left;
+}
+
+.ListCards__Card__Content__description
+{
+    grid-area: description;
+    text-align: left;
+    font-size: 11px;
+
+    height: 100px;
+    line-height: 16px;
+    word-break: break-word;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-line-clamp: 6;
+    -moz-line-clamp: 6;
+    -ms-line-clamp: 6;
+    line-clamp: 6;
+    overflow: hidden;
+}
