@@ -45,6 +45,7 @@ class RecipeClass {
 
     RefreshRender()
     {
+        document.getElementsByClassName('ListCards')[0].innerHTML = ''
         AllRecipes.recipes.forEach(element => {
             document.getElementsByClassName('ListCards')[0].append(Card(element))
         });

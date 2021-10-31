@@ -1,4 +1,5 @@
 import ActualSearch from '../js/actualSearchModele.js';
+import { AllRecipes } from '../class/recipeClass.js';
 
 class SearchClass {
     constructor() {
@@ -37,14 +38,12 @@ class SearchClass {
     {
         document.getElementsByClassName('ItemsSearch')[0].innerHTML = ''
 
-        // Array.from(document.getElementsByClassName('.currentActive')).forEach(element => {
-        //     element.classList.toggle('currentActive')
-        // });
-
         AllSearch.currentFiltre.forEach((item) => {
             document.getElementsByClassName('ItemsSearch')[0].append(ActualSearch(item))
         })
         document.getElementById(itemName.split(' ').join('-')).classList.toggle('currentActive')
+    
+        AllRecipes.RefreshRender()
     }
 }
 
