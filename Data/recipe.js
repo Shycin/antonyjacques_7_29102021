@@ -147,7 +147,7 @@ export const recipes = [
     ],
     time: 50,
     description:
-      'Faire cuire le riz. Une fois le riz cuit, le laisser refroidir. Couper les oeufs dur en quarts ou en lamelle au choix, coupez le tomates en dés, ajouter au riz les oeufs, les tomates, le poisson, le maïs et la vinaigrette. Ajouter au gout de chacun des corniches, olives etc..',
+      'Faire cuire le riz. Une fois le riz cuit, le laisser refroidir. Couper les oeufs dur en quarts ou en lamelle au choix, coupez le tomates en dés, ajouter au riz les oeufs, les tomates, le poisson, le maïs et la vinaigrette. Ajouter au gout de chacun des corniches, olive etc..',
     appliance: 'Cuiseur de riz',
     ustensils: ['saladier', 'passoire'],
   },
@@ -316,7 +316,7 @@ export const recipes = [
         quantity: 1,
       },
       {
-        ingredient: 'Olives',
+        ingredient: 'olive',
       },
       {
         ingredient: 'Fromage de chèvre',
@@ -335,7 +335,7 @@ export const recipes = [
     ],
     time: 15,
     description:
-      "Peler le concombre le couper 2, retirer les pépins. Couper les olives en morceaux, ainsi que le fromage de chèvre. Ajouter le basilic ainsi que le vinaigre balsamic et l'Huile d'olives à votre gout.",
+      "Peler le concombre le couper 2, retirer les pépins. Couper les olive en morceaux, ainsi que le fromage de chèvre. Ajouter le basilic ainsi que le vinaigre balsamic et l'huile d olive à votre gout.",
     appliance: 'Saladier',
     ustensils: ['cuillère en bois', 'couteau'],
   },
@@ -1116,7 +1116,7 @@ export const recipes = [
     description:
       "Découper en cubes les carottes et pommes de terre. Faire revenir dans du beurre. Ajouter les lardons, une fois les lardons dorés, ajouter un grand verre d'eau. Ajouter les petit poids et les haricots verts ( tous deux pré cuits ). Ajouter Sel, poivre, thyms et laurier",
     appliance: 'Poële',
-    ustensils: ['Couteau', 'économe'],
+    ustensils: ['couteau', 'économe'],
   },
   {
     id: 32,
