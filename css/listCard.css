@@ -4,6 +4,7 @@
     flex-wrap: wrap;
     gap: 40px 30px;
     margin-top: 20px;
+    width: 100%;
 }
 
 .ListCards__Card

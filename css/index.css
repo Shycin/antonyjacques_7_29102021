@@ -42,7 +42,7 @@ img
   display: none !important;
 }
   
-.currentActive
+.currentActive, .currentDisallow
 {
   display: none;
 }

@@ -46,12 +46,10 @@ export default function FilterList(title, label, listItem, color = 'primary') {
     inputSearchBar.placeholder=label
     inputSearchBar.onkeyup= function (e) 
     {
-        if(this.value.length > 0)
+        if(this.value.length >= 3)
         {
             Array.from(document.getElementsByClassName('CategoriesSearch__list__elt')).forEach(element => {
-                console.log(element.innerHTML.toLowerCase().includes(this.value))
-                
-                if(!element.innerHTML.toLowerCase().includes(this.value))
+                if(!element.innerHTML.toLowerCase().includes(this.value.toLowerCase()))
                 {
                     element.classList.add('hidden')
                 }
@@ -99,10 +97,10 @@ export default function FilterList(title, label, listItem, color = 'primary') {
     listItem.forEach( (item, key) => {
         const itemInList = document.createElement('li')
         itemInList.id=`order-${key}`
-        itemInList.id=item.split(' ').join('-').toLowerCase()
-        itemInList.classList.add('CategoriesSearch__list__elt', `bg-${color}`, item.split(' ').join('-'))
+        itemInList.id=item.ingredient.split(' ').join('-').toLowerCase()
+        itemInList.classList.add('CategoriesSearch__list__elt', `bg-${color}`, item.ingredient.split(' ').join('-'))
         itemInList.onclick=AllSearch.AddSearch
-        itemInList.innerHTML=item
+        itemInList.innerHTML=item.ingredient
 
         list.append(itemInList)
     })
