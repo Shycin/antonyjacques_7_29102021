@@ -101,7 +101,7 @@ class RecipeClass {
                     if( JSON.stringify(item).toLocaleLowerCase().includes(arrayItem) )
                         return item
             })
-    
+            
             this.recipes = recipeFiltered
         }    
     }

@@ -46,7 +46,7 @@ export default function FilterList(title, label, listItem, color = 'primary') {
     inputSearchBar.placeholder=label
     inputSearchBar.onkeyup= function (e) 
     {
-        if(this.value.length >= 3)
+        if(this.value.length > 0)
         {
             Array.from(document.getElementsByClassName('CategoriesSearch__list__elt')).forEach(element => {
                 if(!element.innerHTML.toLowerCase().includes(this.value.toLowerCase()))
