@@ -31,6 +31,11 @@ class SearchClass {
             AllRecipes.MountedArrayRender(AllSearch.currentFiltre)
             AllSearch.RefreshRender(item.name)
         } 
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
     }
 
 
@@ -40,7 +45,11 @@ class SearchClass {
 
         var tempArrayListFiltre = []
         AllRecipes.recipes.forEach( (recette) => {
+<<<<<<< Updated upstream
 console.log(recette)
+=======
+
+>>>>>>> Stashed changes
             AllRecipes.getAll().forEach( (item) => {
 
                 if(JSON.stringify(recette).toLowerCase().includes(item.ingredient.toLowerCase()))
@@ -55,11 +64,20 @@ console.log(recette)
         AllRecipes.getAll().forEach( (item)=> {
             if(tempArrayListFiltre.indexOf(item.ingredient.toLowerCase()) === -1)
             {
+<<<<<<< Updated upstream
                 console.log(item.ingredient)
                 Array.from(document.querySelectorAll('#'+item.ingredient.split(' ').join('-').toLowerCase())).forEach((el) => el.classList.add('currentDisallow'));
             } 
         })
 
+=======
+                const regex = /\'|\(|\)|\%/ig
+                Array.from(document.querySelectorAll('#'+item.ingredient.replaceAll(regex,' ').split(' ').join('-').toLowerCase())).forEach((el) => el.classList.add('currentDisallow'));
+            } 
+        })
+
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 
 
 
@@ -117,11 +135,25 @@ console.log(recette)
         AllSearch.currentFiltre.forEach((item) => {
             document.getElementsByClassName('ItemsSearch')[0].append(ActualSearch(item))
         })
+<<<<<<< Updated upstream
         document.getElementById(itemName.split(' ').join('-')).classList.toggle('currentActive')
     
+<<<<<<< Updated upstream
 
         this.HideItemNotCompatible()
 
+=======
+=======
+        const regex = /\'|\(|\)|\%/ig
+        console.log("#"+itemName.replaceAll(regex,' ').split(' ').join('-'))
+        // document.getElementById("#"+itemName.replaceAll(regex,' ').split(' ').join('-')).classList.toggle('currentActive')
+        Array.from(document.querySelectorAll("#"+itemName.replaceAll(regex,' ').split(' ').join('-').toLowerCase())).forEach((el) => el.classList.toggle('currentActive'));
+        
+
+        this.HideItemNotCompatible()
+
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
         AllRecipes.RefreshRender()
     }
 }

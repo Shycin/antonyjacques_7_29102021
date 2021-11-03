@@ -96,8 +96,9 @@ export default function FilterList(title, label, listItem, color = 'primary') {
     list.classList.add('CategoriesSearch__list', `bg-${color}`, `toggleShow`, `hidden`)
     listItem.forEach( (item, key) => {
         const itemInList = document.createElement('li')
-        itemInList.id=`order-${key}`
-        itemInList.id=item.ingredient.split(' ').join('-').toLowerCase()
+        // itemInList.id=`order-${key}`
+        const regex = /\'|\(|\)|\%/ig
+        itemInList.id=item.ingredient.replaceAll(regex,' ').split(' ').join('-').toLowerCase()
         itemInList.classList.add('CategoriesSearch__list__elt', `bg-${color}`, item.ingredient.split(' ').join('-'))
         itemInList.onclick=AllSearch.AddSearch
         itemInList.innerHTML=item.ingredient

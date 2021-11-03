@@ -587,7 +587,7 @@ export const recipes = [
         unit: 'tiges',
       },
       {
-        ingredient: "Huile d'olives",
+        ingredient: "Huile d'olive",
         quantity: 2,
         unit: 'cuillère à soupe',
       },
@@ -936,7 +936,7 @@ export const recipes = [
         quantity: 1,
       },
       {
-        ingredient: "Huile d'olives",
+        ingredient: "Huile d'olive",
       },
       {
         ingredient: 'Oignon',
@@ -1320,7 +1320,7 @@ export const recipes = [
         unit: 'g',
       },
       {
-        ingredient: "Huile d'olives",
+        ingredient: "Huile d'olive",
         quantity: 25,
         unit: 'cl',
       },
