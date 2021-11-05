@@ -6,16 +6,16 @@ class SearchClass {
         this.currentFiltre = [];
         this.specificFiltre = "";
 
-        console.log(document.getElementById('inputSearch'))
         document.getElementById('inputSearch').addEventListener('keyup', this.FiltreSpecificInsert)
     }
 
 
     FiltreSpecificInsert()
     {
+        const prev = this.specificFiltre
+
         if(this.value.length >= 3)
-        {
-            const prev = this.specificFiltre
+        {  
             this.specificFiltre = this.value.toLowerCase()
 
             const item = {name: this.specificFiltre, class: ''}
@@ -32,6 +32,13 @@ class SearchClass {
         else
         {
             this.specificFiltre = ""
+
+            AllSearch.currentFiltre = AllSearch.currentFiltre.filter(function(el){
+                return ((el.name===prev&&el.class==='') ? false : true)
+            });
+            AllRecipes.MountedArrayRender(AllSearch.currentFiltre)
+            AllSearch.HideItemNotCompatible()
+            AllRecipes.RefreshRender()
         }
     }
 
@@ -80,7 +87,6 @@ class SearchClass {
 
         })
 
-        console.log(tempArrayListFiltre)
         AllRecipes.getAll().forEach( (item)=> {
             if(tempArrayListFiltre.indexOf(item.ingredient.toLowerCase()) === -1)
             {

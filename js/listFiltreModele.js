@@ -25,6 +25,27 @@ export default function FilterList(title, label, listItem, color = 'primary') {
         Array.from(allToggle).forEach(element => {
             element.classList.toggle('hidden')
         });
+
+        Array.from(document.getElementsByClassName('searchFiltreItem')).forEach(element => {
+            element.value = ''
+
+            var keyboardEvent = document.createEvent('KeyboardEvent');
+            var initMethod = typeof keyboardEvent.initKeyboardEvent !== 'undefined' ? 'initKeyboardEvent' : 'initKeyEvent';
+
+            keyboardEvent[initMethod](
+                'keyup', // event type: keydown, keyup, keypress
+                true, // bubbles
+                true, // cancelable
+                window, // view: should be window
+                false, // ctrlKey
+                false, // altKey
+                false, // shiftKey
+                false, // metaKey
+                40, // keyCode: unsigned long - the virtual key code, else 0
+                0, // charCode: unsigned long - the Unicode character associated with the depressed key, else 0
+            );
+            element.dispatchEvent(keyboardEvent);
+        }); 
     }
 
     const spanButton = document.createElement('span')
@@ -43,6 +64,7 @@ export default function FilterList(title, label, listItem, color = 'primary') {
     searchBar.classList.add('CategoriesSearch__categorie__SearchBar', 'toggleShow', 'hidden')
 
     const inputSearchBar = document.createElement('input')
+    inputSearchBar.classList.add('searchFiltreItem')
     inputSearchBar.placeholder=label
     inputSearchBar.onkeyup= function (e) 
     {
@@ -136,11 +158,34 @@ function showItem(this_, parent_ = null)
 window.addEventListener('click', function(e){
     if(!e.target.closest(".selected") && document.getElementsByClassName('selected').length > 0)
     {
+        console.log('test')
         const allToggle = document.getElementsByClassName('selected')[0].getElementsByClassName('toggleShow');
         document.getElementsByClassName('selected')[0].classList.toggle('selected')
 
         Array.from(allToggle).forEach(element => {
             element.classList.toggle('hidden')
         });
+
+
+        Array.from(document.getElementsByClassName('searchFiltreItem')).forEach(element => {
+            element.value = ''
+
+            var keyboardEvent = document.createEvent('KeyboardEvent');
+            var initMethod = typeof keyboardEvent.initKeyboardEvent !== 'undefined' ? 'initKeyboardEvent' : 'initKeyEvent';
+
+            keyboardEvent[initMethod](
+                'keyup', // event type: keydown, keyup, keypress
+                true, // bubbles
+                true, // cancelable
+                window, // view: should be window
+                false, // ctrlKey
+                false, // altKey
+                false, // shiftKey
+                false, // metaKey
+                40, // keyCode: unsigned long - the virtual key code, else 0
+                0, // charCode: unsigned long - the Unicode character associated with the depressed key, else 0
+            );
+            element.dispatchEvent(keyboardEvent);
+        }); 
     }
 })
