@@ -396,7 +396,7 @@ export const recipes = [
         unit: 'tranches',
       },
       {
-        ingredient: 'Pommes',
+        ingredient: 'Pomme',
         quantity: 1,
       },
       {
@@ -426,7 +426,7 @@ export const recipes = [
         unit: 'g',
       },
       {
-        ingredient: 'Pommes',
+        ingredient: 'Pomme',
         quantity: 8,
       },
       {
@@ -1329,7 +1329,7 @@ export const recipes = [
         quantity: 1,
       },
       {
-        ingredient: 'Coulis de tomates',
+        ingredient: 'Coulis de tomate',
         quantity: 20,
         unit: 'cl',
       },
