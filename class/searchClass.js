@@ -25,9 +25,6 @@ class SearchClass {
             });
             
             AllSearch.currentFiltre.push(item)
-            AllRecipes.MountedArrayRender(AllSearch.currentFiltre)
-            AllSearch.HideItemNotCompatible()
-            AllRecipes.RefreshRender()
         }
         else
         {
@@ -36,10 +33,10 @@ class SearchClass {
             AllSearch.currentFiltre = AllSearch.currentFiltre.filter(function(el){
                 return ((el.name===prev&&el.class==='') ? false : true)
             });
-            AllRecipes.MountedArrayRender(AllSearch.currentFiltre)
-            AllSearch.HideItemNotCompatible()
-            AllRecipes.RefreshRender()
         }
+        AllRecipes.MountedArrayRender(AllSearch.currentFiltre)
+        AllSearch.HideItemNotCompatible()
+        AllRecipes.RefreshRender()
     }
 
 
