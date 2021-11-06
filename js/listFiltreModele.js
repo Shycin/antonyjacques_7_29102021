@@ -158,7 +158,6 @@ function showItem(this_, parent_ = null)
 window.addEventListener('click', function(e){
     if(!e.target.closest(".selected") && document.getElementsByClassName('selected').length > 0)
     {
-        console.log('test')
         const allToggle = document.getElementsByClassName('selected')[0].getElementsByClassName('toggleShow');
         document.getElementsByClassName('selected')[0].classList.toggle('selected')
 

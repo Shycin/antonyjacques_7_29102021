@@ -94,11 +94,11 @@ class RecipeClass {
 
                 if(Array.isArray(arrayItem))
                     return arrayItem.every( (allItemToCompare) => {
-                        if( JSON.stringify(item).toLocaleLowerCase().includes(allItemToCompare.name) )
+                        if( JSON.stringify(item).toLowerCase().includes(allItemToCompare.name) )
                             return item
                     })
                 else
-                    if( JSON.stringify(item).toLocaleLowerCase().includes(arrayItem) )
+                    if( JSON.stringify(item).toLowerCase().includes(arrayItem) )
                         return item
             })
             
