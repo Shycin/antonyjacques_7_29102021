@@ -134,9 +134,11 @@ class RecipeClass {
     {
         document.getElementsByClassName('ListCards')[0].innerHTML = ''
         this.recipes.forEach(element => {
-            if(element.TokenRender !== false)
             document.getElementsByClassName('ListCards')[0].append(Card(element))
         });
+
+        if(this.recipes.length === 0)
+            document.getElementsByClassName('ListCards')[0].innerHTML = 'Aucune recette ne correspond à votre critère... vous pouvez chercher « tarte aux pommes », « poisson », etc'
     }
 }
 

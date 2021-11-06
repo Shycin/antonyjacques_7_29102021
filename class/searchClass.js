@@ -25,9 +25,6 @@ class SearchClass {
             });
             
             AllSearch.currentFiltre.push(item)
-            AllRecipes.MountedArrayRenderAdd(AllSearch.currentFiltre)
-            AllSearch.HideItemNotCompatible()
-            AllRecipes.RefreshRender()
         }
         else
         {
@@ -36,10 +33,11 @@ class SearchClass {
             AllSearch.currentFiltre = AllSearch.currentFiltre.filter(function(el){
                 return ((el.name===prev&&el.class==='') ? false : true)
             });
-            AllRecipes.MountedArrayRenderRemove(AllSearch.currentFiltre)
-            AllSearch.HideItemNotCompatible()
-            AllRecipes.RefreshRender()
         }
+
+        AllRecipes.MountedArrayRenderRemove(AllSearch.currentFiltre)
+        AllSearch.HideItemNotCompatible()
+        AllRecipes.RefreshRender()
     }
 
 
@@ -77,14 +75,29 @@ class SearchClass {
 
         var tempArrayListFiltre = []
         AllRecipes.recipes.forEach( (recette) => {
-            AllRecipes.getAll().forEach( (item) => {
+            AllRecipes.getIngredients().forEach( (item) => {
 
-                if(JSON.stringify(recette).toLowerCase().includes(item.ingredient.toLowerCase()))
+                if(JSON.stringify(recette.ingredients).toLowerCase().includes(item.ingredient.toLowerCase()))
                 {
                     tempArrayListFiltre.push(item.ingredient.toLowerCase())
                 }
             })
 
+            AllRecipes.getUstensiles().forEach( (item) => {
+
+                if(JSON.stringify(recette.ustensils).toLowerCase().includes(item.ingredient.toLowerCase()))
+                {
+                    tempArrayListFiltre.push(item.ingredient.toLowerCase())
+                }
+            })
+
+            AllRecipes.getAppareils().forEach( (item) => {
+
+                if(JSON.stringify(recette.appliance).toLowerCase().includes(item.ingredient.toLowerCase()))
+                {
+                    tempArrayListFiltre.push(item.ingredient.toLowerCase())
+                }
+            })
         })
 
         AllRecipes.getAll().forEach( (item)=> {
@@ -106,7 +119,6 @@ class SearchClass {
         })
 
         const regex = /\'|\(|\)|\%/ig
-        // document.getElementById("#"+itemName.replaceAll(regex,' ').split(' ').join('-')).classList.toggle('currentActive')
         Array.from(document.querySelectorAll("#"+itemName.replaceAll(regex,' ').split(' ').join('-').toLowerCase())).forEach((el) => el.classList.toggle('currentActive'));
         
 
