@@ -25,7 +25,7 @@ class SearchClass {
             });
             
             AllSearch.currentFiltre.push(item)
-            AllRecipes.MountedArrayRender(AllSearch.currentFiltre)
+            AllRecipes.MountedArrayRenderAdd(AllSearch.currentFiltre)
             AllSearch.HideItemNotCompatible()
             AllRecipes.RefreshRender()
         }
@@ -36,7 +36,7 @@ class SearchClass {
             AllSearch.currentFiltre = AllSearch.currentFiltre.filter(function(el){
                 return ((el.name===prev&&el.class==='') ? false : true)
             });
-            AllRecipes.MountedArrayRender(AllSearch.currentFiltre)
+            AllRecipes.MountedArrayRenderRemove(AllSearch.currentFiltre)
             AllSearch.HideItemNotCompatible()
             AllRecipes.RefreshRender()
         }
@@ -48,7 +48,7 @@ class SearchClass {
         const name = document.getElementsByClassName('ItemsSearch__item__name')[0].innerHTML
 
         AllSearch.currentFiltre = AllSearch.currentFiltre.filter((element) => { return element.name !== name })
-        AllRecipes.MountedArrayRender(AllSearch.currentFiltre)
+        AllRecipes.MountedArrayRenderRemove(AllSearch.currentFiltre)
         AllSearch.RefreshRender(name)
     }
 
@@ -65,7 +65,7 @@ class SearchClass {
         if(AllSearch.currentFiltre.findIndex((element) => element.name === item.name) < 0)
         {
             AllSearch.currentFiltre.push(item)
-            AllRecipes.MountedArrayRender(AllSearch.currentFiltre)
+            AllRecipes.MountedArrayRenderAdd(AllSearch.currentFiltre)
             AllSearch.RefreshRender(item.name)
         } 
     }

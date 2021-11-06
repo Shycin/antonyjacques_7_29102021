@@ -79,12 +79,17 @@ class RecipeClass {
     }
 
 
+
+
+
+
+
     ResetArrayRender()
     {
         this.recipes = recipes;
     }
 
-    MountedArrayRender(arrayItem)
+    MountedArrayRenderRemove(arrayItem)
     {
         this.ResetArrayRender()
 
@@ -94,11 +99,30 @@ class RecipeClass {
 
                 if(Array.isArray(arrayItem))
                     return arrayItem.every( (allItemToCompare) => {
-                        if( JSON.stringify(item).toLocaleLowerCase().includes(allItemToCompare.name) )
+                        if( JSON.stringify(item).toLowerCase().includes(allItemToCompare.name) )
                             return item
                     })
                 else
-                    if( JSON.stringify(item).toLocaleLowerCase().includes(arrayItem) )
+                    if( JSON.stringify(item).toLowerCase().includes(arrayItem) )
+                        return item
+            })
+            
+            this.recipes = recipeFiltered
+        }    
+    }
+
+
+    MountedArrayRenderAdd(arrayItem)
+    {
+        if(arrayItem.length > 0)
+        {
+            const recipeFiltered = this.recipes.filter( (item) => {
+
+                if(Array.isArray(arrayItem))
+                    if( JSON.stringify(item).toLowerCase().includes(arrayItem[arrayItem.length - 1].name) )
+                        return item
+                else
+                    if( JSON.stringify(item).toLowerCase().includes(arrayItem) )
                         return item
             })
             
