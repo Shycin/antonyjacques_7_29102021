@@ -75,10 +75,8 @@
     -webkit-box-orient: vertical;
     -moz-box-orient: vertical;
     -ms-box-orient: vertical;
-    box-orient: vertical;
     -webkit-line-clamp: 6;
     -moz-line-clamp: 6;
     -ms-line-clamp: 6;
-    line-clamp: 6;
     overflow: hidden;
 }
