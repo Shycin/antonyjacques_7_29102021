@@ -29,7 +29,19 @@ body {
 
 #root
 {
+  margin: auto;
+}
+
+#home
+{
   margin: 20px 100px;
+}
+
+@media screen and (max-width: 425px) {
+  #home
+  {
+    margin: 20px 10px;
+  }
 }
 
 img
