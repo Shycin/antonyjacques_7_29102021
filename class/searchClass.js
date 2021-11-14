@@ -43,7 +43,7 @@ class SearchClass {
 
 
     RemoveSearch() {
-        const name = document.getElementsByClassName('ItemsSearch__item__name')[0].innerHTML
+        const name = this.getElementsByClassName('ItemsSearch__item__name')[0].innerHTML
 
         AllSearch.currentFiltre = AllSearch.currentFiltre.filter((element) => { return element.name !== name })
         AllRecipes.MountedArrayRenderRemove(AllSearch.currentFiltre)
