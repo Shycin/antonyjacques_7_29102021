@@ -42,7 +42,7 @@ class SearchClass {
 
 
     RemoveSearch() {
-        const name = document.getElementsByClassName('ItemsSearch__item__name')[0].innerHTML
+        const name = this.getElementsByClassName('ItemsSearch__item__name')[0].innerHTML
 
         AllSearch.currentFiltre = AllSearch.currentFiltre.filter((element) => { return element.name !== name })
         AllRecipes.MountedArrayRender(AllSearch.currentFiltre)
@@ -119,7 +119,6 @@ class SearchClass {
         })
 
         const regex = /\'|\(|\)|\%/ig
-        console.log('#'+itemName.replaceAll(regex,' ').split(' ').join('-').toLowerCase())
         Array.from(document.querySelectorAll("#"+itemName.replaceAll(regex,' ').split(' ').join('-').toLowerCase())).forEach((el) => el.classList.toggle('currentActive'));
         
 
